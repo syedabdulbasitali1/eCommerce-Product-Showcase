@@ -1,6 +1,6 @@
 # 🛒 eCommerce Product Showcase
 
-![eCommerce Product Showcase](eCommerce-Preview-images/10.PNG)
+![eCommerce Product Showcase](/eCommerce-preview-images/10.PNG)
 
 > **"The perfect blend of creativity and functionality."**
 
@@ -24,10 +24,10 @@ Welcome to the **eCommerce Product Showcase**! This project is a modern, clean, 
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](/eCommerce-Preview-images/10.PNG)
+![Home Page](/eCommerce-preview-images/10.PNG)
 
 ### Product Page
-![Product Page](/eCommerce-Preview-images/11.PNG)
+![Product Page](/eCommerce-preview-images/11.PNG)
 
 ## 🚀 How to Get Started
 
