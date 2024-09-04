@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --font-family: "Poppins", sans-serif;
+            --gradiant-color: linear-gradient(to right, rgb(123, 33, 241), rgb(0, 128, 122), black);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
+
+        body {
+            background-color: rgb(197, 203, 209);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            margin: 10px;
+            height: 38px;
+            filter: drop-shadow(30px 30px 30px black);
+        }
+
+        .title {
+            font-weight: 700;
+            font-style: normal;
+            background: var(--gradiant-color);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 1px 8px 14px black;
+        }
+
+        header .person-icon {
+            height: 48px;
+            margin: 8px;
+            filter: drop-shadow(2px 2px 10px 4px rgba(57, 57, 57, 0.5));
+        }
+
+        nav details {
+            position: relative;
+        }
+
+        nav details summary {
+            list-style: none;
+        }
+
+        nav details ul {
+            position: absolute;
+            right: 10%;
+            list-style-type: none;
+            background-color: white;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0px 8px 10px 6px rgba(58, 57, 57, 0.5);
+            border-radius: 12px;
+        }
+
+        nav details ul li {
+            padding: 5px 10px;
+        }
+
+        nav details ul li:hover {
+            background-color: rgb(123, 33, 241);
+            border-radius: 12px;
+        }
+
+        #container {
+            min-height: 1000px;
+            width: 86dvw;
+            margin: 30px auto;
+            border-radius: 28px;
+            background-color: white;
+            box-shadow: 0px 8px 10px 6px rgba(58, 57, 57, 0.5);
+        }
+
+        .heroarea {
+            min-height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 12px 0px 12px;
+        }
+        
+
+        .heroarea h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            font-style: normal;
+            background: var(--gradiant-color);
+            -webkit-background-clip: text;
+            color: transparent;
+            filter: drop-shadow(20px 20px 30px black);
+
+        }
+
+        .heroarea .btn,
+        .more {
+            height: 50px;
+            width: 200px;
+            border: none;
+            color: white;
+            margin-top: 20px;
+            border-radius: 30px;
+            background: var(--gradiant-color);
+            box-shadow: 2px 2px 10px 4px rgba(58, 57, 57, 0.5);
+        }
+
+        .shop .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .shop .nav button {
+            border: none;
+            color: black;
+            background-color: white;
+            height: 32px;
+            width: 54px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px 4px rgba(57, 57, 57, 0.5);
+            margin-right: 4px;
+        }
+
+        .shop .nav button:hover {
+            background-color: rgba(0, 128, 122, 0.671);
+        }
+
+        .shop-area {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 1.5rem;
+            padding-bottom: 1.5rem;
+
+
+        }
+        @media screen and (max-width:860px){
+            .shop-area{
+                column-gap: 10px;
+                row-gap: 30px;
+            }
+        }
+
+        .shop-area .box {
+            height: 270px;
+            width: 270px;
+            border-radius: 18px;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            box-shadow: 2px 2px 10px 4px rgba(57, 57, 57, 0.5);
+        }
+
+        .shop-area .box>img {
+            height: 100%;
+            width: 100%;
+            border-radius: 18px;
+            filter: drop-shadow(30px 30px 30px black);
+
+        }
+
+        .shop-area .box h4 {
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .shop-area .box .product-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            font-size: 1.3rem;
+        }
+
+
+        .shop-area .box .product-details img {
+            height: 60%;
+            margin: 0.4rem;
+        }
+
+        .shop-area .box .product-details button {
+            border: none;
+            color: black;
+            background-color: white;
+            height: 32px;
+            width: 74px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px 4px rgba(57, 57, 57, 0.5);
+            margin-right: 4px;
+
+
+        }
+        @media screen and (max-width:1000px) {
+            
+            .shop-area .box{
+                height: 210px;
+                width: 210px;
+            }
+            .shop-area .box h4 {
+                font-size: 1rem;
+                text-align: center;
+            }
+            .shop-area .box .product-details{
+                font-size: 0.5rem;
+            }
+            .shop-area .box .product-details button{
+                margin-top: 10px;
+            }
+        }
+
+        .box details {
+            position: relative;
+        }
+
+        .box details summary {
+            list-style: none;
+        }
+
+        .box details summary img {
+            width: 24px;
+        }
+
+        .box details ul {
+            background-color: white;
+            position: absolute;
+            top: 52px;
+            z-index: 1;
+            width: 128px;
+            list-style: none;
+            padding: 2px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 10px 6px rgba(58, 57, 57, 0.5);
+        }
+
+        .box details ul li img {
+            width: 12px;
+        }
+
+        .box details ul li {
+            padding: 5px 2px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        /* .box details[open] summary{
+            background-color: blueviolet;
+        } */
+         
+        .more {
+            margin: 20px auto 20px auto;
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="container">
+        <header>
+            <img src="./images/source-code-48.png" alt="logo" class="logo">
+            <span class="title">DEVELOPER.EXE</span>
+            <nav>
+                <details>
+                    <summary>
+                        <img src="./images/person-icon-96.png" alt="profile-icon" class="person-icon">
+                    </summary>
+                    <ul>
+                        <li>Profile</li>
+                        <li>
+                            <details>
+                                <summary>Settings</summary>
+                                <ul>
+                                    <li>Change Theme</li>
+                                    <li>Change Profile</li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>Sign Out</li>
+                    </ul>
+                </details>
+            </nav>
+        </header>
+
+        <section class="heroarea">
+            <h1>HTML CSS Tips & Trick</h1>
+            <button class="btn">Shop</button>
+        </section>
+
+
+        <section class="shop">
+            <div class="nav">
+                <h2>Popular Products</h2>
+                <div class="links">
+                    <button class="all">All</button>
+                    <button class="shirts">Shirts</button>
+                    <button class="shoes">Shoes</button>
+                </div>
+            </div>
+
+
+            <div class="shop-area">
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li> <img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt="">i class="fa-solid fa-cart-shopping"></i>
+                                    Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./images/shoes-1.png" alt="shoes">
+                    <h4>Product Name</h4>
+                    <div class="product-details">
+                        <h4>$100</h4>
+
+                        <button>See More</button>
+                        <details>
+                            <summary>
+                                <img src="./images/menu-vertical-30.png" alt="manu-vertical-dots">
+
+                            </summary>
+                            <ul>
+                                <li><img src="./images/cart-icon.svg" alt=""> Add To Cart</li>
+                                <li><img src="./images/question-mark.svg" alt=""> Questions</li>
+                                <li><img src="./images/report-icon.svg" alt=""> Report</li>
+                            </ul>
+                        </details>
+
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <button class="more">See More</button>
+        
+
+
+
+
+        </section>
+
+
+
+    </section>
+
+</body>
+
+</html>
