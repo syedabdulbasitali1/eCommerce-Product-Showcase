@@ -1,6 +1,6 @@
 # 🛒 eCommerce Product Showcase
 
-![eCommerce Product Showcase](/eCommerce-Preview-images/10.PNG)
+![eCommerce Product Showcase](./eCommerce-Preview-images/10.PNG)
 
 > **"The perfect blend of creativity and functionality."**
 
